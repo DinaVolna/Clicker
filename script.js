@@ -1,45 +1,96 @@
-const btn = document.querySelector("#btn");
-const table = document.querySelector(".table");
-const rob = document.querySelector("#rob");
-const tabr = document.querySelector(".tabr");
+const btn = document.querySelector('#btn');
+
+const table = document.querySelector('.table');
+
+const rob = document.querySelector('#rob');
+const tabr = document.querySelector('.tabr');
+
+
 
 console.log(table);
-console.log(1);
-let p = 0;
 
-let m = 50;
 
-let k = 0;
 
-let l = 2;
+let clicks = 0
 
-let v = 2;
+let price = 50
+
+let robs = 0
+
+let l = 2
+
+let buycl = 2
+
+
 
 console.log(btn);
 
-btn.addEventListener("click", function () {
-  p += 1;
-  table.innerHTML = "Your clicks: " + p + " cl";
-});
 
-rob.addEventListener("click", function () {
-  if (p >= m) {
-    k += v;
-    p -= m;
-    m += 50;
+btn.addEventListener('click' || 'touch', function(){
+  clicks+=1
+  table.innerHTML = 'Your clicks: ' + clicks + ' cl'
+})
 
-    rob.innerHTML = "Buy the robot " + v + " cl/sec" + " for " + m + " cl";
-    tabr.innerHTML = "Robot: " + k + " b/sec";
-    table.innerHTML = "Your clicks: " + p + " cl";
-  }
-});
 
-function robotcl() {
-  p += k;
-  // m += 17
-  console.log("55");
-  //rob.innerHTML = 'Buy the robot ' + k + ' cl/sec' + ' for ' + m + ' cl'
-  table.innerHTML = "Your clicks: " + p + " cl";
-  tabr.innerHTML = "Robot: " + k + " b/sec";
+rob.addEventListener('click' || 'touch',
+function(){
+  if(clicks>=price){ 
+  robs += buycl
+  clicks -= price
+  price += 50
+
+		 localStorage.clear()
+		//	vkpm
+			localStorage.setItem('buycl', buycl);
+			localStorage.setItem('robs', robs);
+			localStorage.setItem('price', price);
+			localStorage.setItem('clicks', clicks);
+
+
+			let buyclLS = localStorage.getItem('buycl')
+			console.log(buyclLS)
+
+			let priceLS = localStorage.getItem('price')
+
+		 let robsLS = localStorage.getItem('robs')
+
+			let clicksLS = localStorage.getItem('clicks')
+
+
+  rob.innerHTML = 'Buy the robot ' + buyclLS + ' cl/sec' + ' for ' + priceLS + ' cl'
+  tabr.innerHTML = 'Robot: ' + robsLS + ' b/sec'
+  table.innerHTML = 'Your clicks: ' + clicksLS + ' cl'
+
+  
+
+
 }
+})
+
+function robotcl(){
+  clicks += robs
+ // m += 17
+  console.log('55');
+
+localStorage.clear();
+		//	vkpm
+			localStorage.setItem('buycl', buycl);
+			localStorage.setItem('robs', robs);
+			localStorage.setItem('price', price);
+			localStorage.setItem('clicks', clicks);
+
+			let buyclLS = localStorage.getItem('buycl')
+			console.log(buyclLS)
+
+			let priceLS = localStorage.getItem('price')
+
+		 let robsLS = localStorage.getItem('robs')
+
+			let clicksLS = localStorage.getItem('clicks')
+
+  //rob.innerHTML = 'Buy the robot ' + k + ' cl/sec' + ' for ' + m + ' cl'
+  table.innerHTML = 'Your clicks: ' + clicksLS + ' cl'
+  tabr.innerHTML = 'Robot: ' + robsLS + ' b/sec'
+
+};
 setInterval(robotcl, 1000);
