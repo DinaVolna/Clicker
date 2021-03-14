@@ -4,7 +4,7 @@ const rob = document.querySelector("#rob");
 const tabr = document.querySelector(".tabr");
 
 console.log(table);
-
+console.log(1);
 let p = 0;
 
 let m = 50;
