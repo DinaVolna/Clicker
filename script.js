@@ -11,28 +11,31 @@ console.log(table);
 
 
 
-let clicks = 0
+let clicks = 0;
 
-let price = 50
+let price = 50;
 
-let robs = 0
+let robs = 0;
 
-let l = 2
+let l = 2;
 
-let buycl = 2
+let buycl = 2;
 
-
+const infoClicks = {
+  'robs1': robs,
+  'price': price
+};
 
 console.log(btn);
 
 
-btn.addEventListener('click' || 'touch', function(){
+btn.addEventListener('click', function(){
   clicks+=1
   table.innerHTML = 'Your clicks: ' + clicks + ' cl'
 })
 
 
-rob.addEventListener('click' || 'touch',
+rob.addEventListener('click',
 function(){
   if(clicks>=price){ 
   robs += buycl
