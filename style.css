@@ -1,0 +1,103 @@
+.btn {
+  font-size: 17px;
+  display: block;
+  text-align: center;
+  font-size: 38px;
+  width: 200px;
+  border-radius: 15px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 22px;
+  outline: none;
+  box-shadow: 0 9px #999;
+}
+
+.btn:active {
+  box-shadow: 0 4px #666;
+  transform: translateY(4px);
+}
+
+.btn span {
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 10;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#btn {
+  color: darkslateblue;
+  background-color: lavender;
+  border-color: darkslateblue;
+  padding: 50px 15px;
+}
+
+#rob {
+  color: darkolivegreen;
+  padding: 20px 15px;
+  background-color: azure;
+  border-color: darkolivegreen;
+}
+
+#btnGi {
+  color: maroon;
+  padding: 6px 15px;
+  background-color: lavenderblush;
+  border-color: maroon;
+}
+
+.bu {
+  width: 20px;
+  height: 38px;
+  background-image: url(img/bush.png);
+  background-size: 20px 38px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+  animation: cactusMov 1.5s infinite linear;
+}
+
+@keyframes cactusMov {
+  0% {
+    left: 600px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+
+.he {
+  width: 20px;
+  height: 38px;
+  background-image: url(img/heart.png);
+  background-size: 20px 38px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+  animation: cactusMov 1.5s infinite linear;
+}
+
+@keyframes cactusMov {
+  0% {
+    left: 600px;
+  }
+  100% {
+    left: -20px;
+  }
+}
