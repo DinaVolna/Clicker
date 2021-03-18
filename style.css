@@ -3,7 +3,7 @@
   display: block;
   text-align: center;
   font-size: 38px;
-  width: 200px;
+  /*width: 200px;0*/
   border-radius: 15px;
   transition: all 0.5s;
   cursor: pointer;
@@ -53,6 +53,7 @@
   padding: 20px 15px;
   background-color: azure;
   border-color: darkolivegreen;
+  height: 150px;
 }
 
 #del {
