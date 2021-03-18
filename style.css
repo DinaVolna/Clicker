@@ -55,14 +55,14 @@
   border-color: darkolivegreen;
 }
 
-#btnGi {
+#del {
   color: maroon;
   padding: 6px 15px;
   background-color: lavenderblush;
   border-color: maroon;
 }
 
-.bu {
+/* .bu {
   width: 20px;
   height: 38px;
   background-image: url(img/bush.png);
@@ -71,9 +71,9 @@
   top: 110px;
   left: 580px;
   animation: cactusMov 1.5s infinite linear;
-}
+} */
 
-@keyframes cactusMov {
+/* @keyframes cactusMov {
   0% {
     left: 600px;
   }
@@ -100,4 +100,4 @@
   100% {
     left: -20px;
   }
-}
+} */
